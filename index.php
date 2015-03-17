@@ -49,3 +49,16 @@
 */
 
 require_once(dirname(__FILE__) . '/' . 'config.php');
+require_once(LIB_DIR . 'tools.php');
+
+	$text = lorem_ipsum();
+
+	$word = "est";
+
+	$results = search($word, $text, 'morris_pratt');
+
+	$text = colorize_results($word, $text, $results['positions'], $results['size_needle']);
+
+	$time = $results['elapsed_time'];
+
+require_once(TEMPLATES_DIR . 'result.php');
