@@ -49,16 +49,28 @@
 */
 
 require_once(dirname(__FILE__) . '/' . 'config.php');
-require_once(LIB_DIR . 'tools.php');
+require_once(LIB_DIR . 'search.php');
 
-	$text = lorem_ipsum();
+if(isset($_GET['mode']) && $_GET['mode'] == 'multisearch') {
 
-	$word = "est";
+	$needle = MULTI_SEARCH_DEFAULT_NEEDLE;
+	$n = MULTI_SEARCH_NUMBER_ITERATION;
+	$haystacks = get_n_text($n, lorem_ipsum());
 
-	$results = search($word, $text, 'morris_pratt');
+	$results = multi_search($needle, $haystacks);
 
-	$text = colorize_results($word, $text, $results['positions'], $results['size_needle']);
+	require_once(TEMPLATES_DIR . 'result_multi_search.php');
+}
+else if( isset($_POST['search']) && $haystack = check_post($_POST)) {
+
+	$results = search($_POST['needle'], $haystack, $_POST['algorithm']);
+
+	$text = colorize_results($_POST['needle'], $haystack, $results['positions'], $results['size_needle']);
 
 	$time = $results['elapsed_time'];
 
-require_once(TEMPLATES_DIR . 'result.php');
+	require_once(TEMPLATES_DIR . 'result.php');
+}
+else {
+	require_once(TEMPLATES_DIR . 'search.php');
+}

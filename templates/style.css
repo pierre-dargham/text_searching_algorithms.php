@@ -1,0 +1,24 @@
+body {
+	color : #081038;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	scrollbar-3d-light-color : #000000;
+	scrollbar-arrow-color : #000000;
+	scrollbar-base-color : #888888;
+	scrollbar-dark-shadow-color : #000000;
+	scrollbar-face-color : #787878;
+	scrollbar-highlight-color : #000000;
+	scrollbar-shadow-color : #ffffff;
+}
+
+.result {
+	background-color: yellow;
+}
+
+.found {
+	color: green;
+}
+
+.not-found {
+	color: red;
+}
