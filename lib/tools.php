@@ -32,11 +32,6 @@ function check_post($post) {
 }
 
 function colorize_results($pattern, $text, $positions, $size_word) {
-
-	//if(empty($positions)) {
-	//	return $text;
-	//}
-
 	$style_offset = 0;
 	$style_len = strlen(COLORIZE_START) + strlen(COLORIZE_END);
 	$result = COLORIZE_START . $pattern . COLORIZE_END;
@@ -83,4 +78,22 @@ function get_js_categories($haystacks) {
 	    $categories .= '\'' . $len . '\', ';
 	}
 	return $categories;
+}
+
+function get_jquery_url() {
+	if(LOCAL) {
+		return URL_JS_JQUERY_LOCAL;
+	}
+	else {
+		return URL_JS_JQUERY;
+	}
+}
+
+function get_highcharts_url() {
+	if(LOCAL) {
+		return URL_JS_HIGHCHARTS_LOCAL;
+	}
+	else {
+		return URL_JS_HIGHCHARTS;
+	}
 }
