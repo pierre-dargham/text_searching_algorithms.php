@@ -1,3 +1,16 @@
+<?php
+
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                result.php
+ * Description:         TEMPLATE : Single-search results
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

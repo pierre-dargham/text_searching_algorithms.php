@@ -33,20 +33,26 @@ define('ALGO_DIR', LIB_DIR . 'algorithms/');
 
 define('TEMPLATES_DIR', ABSPATH . 'templates/');
 
-define ('SEARCH_URL', 'http://127.0.0.1/text_searching_algorithms/');
-
-define ('STYLESHEET_URL', './templates/style.css');
+define('STYLESHEET_URL', './templates/style.css');
 
 define('COLORIZE_START', '<span class="result">');
 
 define('COLORIZE_END', '</span>');
 
+define('MULTI_SEARCH_NUMBER_ITERATION', 4);
+
+define('MULTI_SEARCH_DEFAULT_NEEDLE', 'estestest');
+
 define('URL_LOREM_IPSUM', 'http://loripsum.net/api/100/medium/plaintext');
 
 define('URL_LOREM_IPSUM_LOCAL', 'http://127.0.0.1/text_searching_algorithms/data/lorem');
 
-define('MULTI_SEARCH_NUMBER_ITERATION', 3);
+define('URL_JS_JQUERY', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
 
-define('MULTI_SEARCH_DEFAULT_NEEDLE', 'estestest');
+define('URL_JS_JQUERY_LOCAL', 'http://127.0.0.1/text_searching_algorithms/lib/js/jquery.min.js');
+
+define('URL_JS_HIGHCHARTS', 'http://code.highcharts.com/highcharts.js');
+
+define('URL_JS_HIGHCHARTS_LOCAL', 'http://127.0.0.1/text_searching_algorithms/lib/js/highcharts.js');
 
 set_time_limit(1000);

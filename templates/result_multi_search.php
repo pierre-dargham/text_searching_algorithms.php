@@ -1,11 +1,24 @@
+<?php
+
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                result_multi_search.php
+ * Description:         TEMPLATE : Multi-search results
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="<?php echo STYLESHEET_URL; ?>">
         <title>Text searching algorithms</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="<?php echo get_jquery_url(); ?>"></script>
+        <script src="<?php echo get_highcharts_url(); ?>"></script>
     </head>
     <body>
         <h1>Text searching algorithms - Execution times</h1>
