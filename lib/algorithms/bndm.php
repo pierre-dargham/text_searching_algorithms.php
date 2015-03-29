@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                bndm.php
+ * Description:         ALGORITHM : BNDM
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
 function bndm($haystack, $size_haystack, $needle, $size_needle) {
 
   $positions = array();

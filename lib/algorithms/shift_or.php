@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                shift_or.php
+ * Description:         ALGORITHM : Shift-Or
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
 function shift_or($haystack, $size_haystack, $needle, $size_needle) {
 
 	$positions = array();

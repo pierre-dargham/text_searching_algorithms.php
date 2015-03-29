@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                knuth_morris_pratt.php
+ * Description:         ALGORITHM : Knuth-Morris-Pratt
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
 function knuth_morris_pratt_prepare($needle, $size_needle) {
    $kmpNext = array();
    $kmpNext[0] = -1;

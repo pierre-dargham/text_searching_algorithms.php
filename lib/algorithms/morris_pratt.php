@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                morris_pratt.php
+ * Description:         ALGORITHM : Morris-Pratt
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
 function morris_pratt_prepare($needle, $size_needle) {
 	$mpNext = array();
 	$i = 0;

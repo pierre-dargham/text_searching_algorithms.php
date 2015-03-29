@@ -1,7 +1,21 @@
 <?php
 
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                text.php
+ * Description:         Text functions
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
 function lorem_ipsum() {
-	return file_get_contents(URL_LOREM_IPSUM_LOCAL);
+	if(LOCAL) {
+		return file_get_contents(URL_LOREM_IPSUM_LOCAL);
+	}
+	else {
+		return file_get_contents(URL_LOREM_IPSUM);
+	}
 }
 
 // get n text of size i^2 ; i from 0 to n

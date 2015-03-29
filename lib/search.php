@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Project :            text_searching_algorithms.php
+ * File:                search.php
+ * Description:         Search functions
+ * Author:              Pierre DARGHAM
+ * Project URI:         https://github.com/pierre-dargham/text_searching_algorithms.php
+ *
+*/
+
 require_once(LIB_DIR . 'tools.php');
 require_once(LIB_DIR . 'text.php');
 require_once(LIB_DIR . 'algorithms.php');
@@ -77,4 +86,30 @@ function search_n_times($n, $needle, $haystack, $algorithm) {
 		'results' 	=> $results,
 		'times'		=> $times
 	);
+}
+
+function check_results_positions($search_results) {
+
+	$count = array();
+
+	for($i = 0; $i < MULTI_SEARCH_NUMBER_ITERATION; ++$i) {
+		$prev = 0;
+		foreach($search_results as $algo => $search_result) {
+
+			$result = $search_result['results'][$i]['positions'];
+			sort($result);
+
+			if($prev != 0) {
+				if(!( (empty($result) && empty($prev)) || ($result == $prev) ) ) {
+					die('ERROR / ALGORITHMS : Results are differents');
+				}
+			}
+
+			$prev = $result;
+		}
+
+		$count[] = count($prev);
+	}
+
+	return $count;
 }
