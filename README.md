@@ -16,4 +16,4 @@
  	* @see http://www-igm.univ-mlv.fr/~lecroq/string/bndm.html
  
  	5. Shift-OR
- 	* @see 
+ 	* @see http://www-igm.univ-mlv.fr/~lecroq/string/node6.html#SECTION0060
