@@ -21,7 +21,7 @@ function registred_algorithms() {
 
 define('DEBUG', true);
 
-define('LOCAL', true);
+define('LOCAL', false);
 
 define('ABSPATH', dirname(__FILE__) . '/');
 

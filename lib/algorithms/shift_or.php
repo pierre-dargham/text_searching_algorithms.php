@@ -23,7 +23,7 @@ function shift_or($haystack, $size_haystack, $needle, $size_needle) {
     } 
     $lim = ~($lim>>1);
 
-    /* Searching */ 
+    // searching
     for ($state = ~0, $j = 0; $j < $size_haystack; ++$j) {
 
     // shift AND 
